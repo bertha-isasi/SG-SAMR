@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { MenubarModule } from 'primeng/menubar';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { MenuComponent } from 'src/app/menu/menu.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { PrimeNgModule } from './prime-ng/prime-ng.module';
     TooltipModule,
     MenubarModule,
   ],
-  exports: [PrimeNgModule],
+  exports: [PrimeNgModule, ],
   declarations: [],
 })
 export class SharedModule {}

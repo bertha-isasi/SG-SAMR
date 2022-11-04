@@ -10,13 +10,13 @@ import { ToastModule } from 'primeng/toast';
 import { MenubarModule } from 'primeng/menubar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuBarComponent } from '../shared/menu-bar/menu-bar.component';
 import {ImageModule} from 'primeng/image';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuBarComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
