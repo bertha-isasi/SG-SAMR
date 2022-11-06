@@ -36,7 +36,7 @@ import { TableModule } from 'primeng/table';
     HttpClientModule,
     ImageModule,
     ToolbarModule,
-    TableModule
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
