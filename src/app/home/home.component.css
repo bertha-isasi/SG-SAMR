@@ -1,0 +1,11 @@
+h1 {
+    margin-right: 70%;
+    text-align: center;
+    color: #174B1C;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.p-button-success {
+    background-color: #174B1C;
+    margin: 0% 0% 0% 31%;
+}
