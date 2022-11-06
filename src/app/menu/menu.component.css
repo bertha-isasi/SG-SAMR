@@ -1,12 +1,22 @@
-/* p-image{
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-} */
+#background-logged {
+    margin: 20% 0% 0% 5% ;
+    width: 90%;
+    height: 60%;
+    position: absolute;
+}
 
-#background {
-height: 100%;
-color: #fff; background-image: url("../../assets/images/background.png");
-background-size: 100%;
-background-size: cover;
+#background-logged img { 
+    width: 90%;
+    height: 70%;
+}
+
+#menubar {
+    background-color: white;
+}
+
+#salir{
+    color: #174B1C;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: transparent;
 }

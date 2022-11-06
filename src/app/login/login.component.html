@@ -1,3 +1,7 @@
+<div id="background">
+    <img src="../assets/images/background.png" alt="">
+</div>
+
 <div>
     <div class="col">
         <div class="container" id="container">
@@ -5,11 +9,11 @@
                 <form>
                     <img width="150px" src="../assets/images/logo.png">
                     <h1>Sistema de Gestión de Solicitudes</h1>
-                    <input id="username" type="text" placeholder="Usuario" required formControlName="username">
+                    <input id="username" type="text" placeholder="Usuario" formControlName="username">
 
-                    <input id="password" type="password" placeholder="Contraseña" required formControlName="password">
+                    <input id="password" type="password" placeholder="Contraseña" formControlName="password">
             
-                    <button pButton type="submit" class="p-button-raised p-button-rounded" label="Iniciar Sesión"></button>
+                    <button pButton type="submit" class="p-button-raised p-button-rounded" label="Iniciar Sesión" routerLink="/home"></button>
                 </form>
             </div>
         </div>

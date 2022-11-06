@@ -1,0 +1,11 @@
+
+<div id="background-logged">
+    <img src="../assets/images/background-logged.png" alt="">
+</div>
+
+<p-menubar id="menubar" [model]="menuItems" >
+    <ng-template pTemplate="start">
+        <img src="../../assets/images/logo-menubar.png" height="40" class="mr-2" routerLink="/home">
+    </ng-template>
+    <button id="salir" pButton pRipple type="button" icon="pi pi-sign-out" routerLink="/" class="p-button-secondary"></button>
+</p-menubar>
