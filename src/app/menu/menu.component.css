@@ -1,4 +1,12 @@
-p-image{
+/* p-image{
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    position: relative;
+} */
+
+#background {
+height: 100%;
+color: #fff; background-image: url("../../assets/images/background.png");
+background-size: 100%;
+background-size: cover;
 }

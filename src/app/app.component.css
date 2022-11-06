@@ -1,0 +1,10 @@
+#background {
+    width: 99%;
+    height: 98%;
+    position: absolute;
+}
+
+#background img { 
+    width: 100%;
+    height: 100%;
+}
