@@ -1,11 +1,33 @@
 h1 {
-    margin-right: 70%;
     text-align: center;
     color: #174B1C;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin-left: 5%;
+    position: absolute;
 }
 
-.p-button-success {
+#toolbar {
+    background-color: white;
+    border-color: white;
+}
+
+#nuevas {
     background-color: #174B1C;
-    margin: 0% 0% 0% 31%;
+    margin: 3% 0% 0% 32%;
+    position: absolute;
+    width: 250px;
+}
+
+#soporte {
+    background-color: #174B1C;
+    margin: 3% 0% 0% 54%;
+    position: absolute;
+    width: 250px;
+}
+
+#informe {
+    background-color: #174B1C;
+    margin: 3% 0% 0% 76%;
+    position: absolute;
+    width: 250px;
 }

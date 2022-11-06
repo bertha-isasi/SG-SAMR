@@ -13,6 +13,8 @@ import {ImageModule} from 'primeng/image';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HomeComponent } from './home/home.component';
     SharedModule,
     MenubarModule,
     HttpClientModule,
-    ImageModule
+    ImageModule,
+    ToolbarModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

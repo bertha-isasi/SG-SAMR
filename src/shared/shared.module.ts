@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { MenubarModule } from 'primeng/menubar';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
-import { MenuComponent } from 'src/app/menu/menu.component';
+import { PrimeTemplate } from 'primeng/api';
 
 @NgModule({
   imports: [
