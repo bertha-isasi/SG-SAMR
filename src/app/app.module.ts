@@ -8,13 +8,17 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { MenubarModule } from 'primeng/menubar';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {ImageModule} from 'primeng/image';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TableModule } from 'primeng/table';
+import { MsalGuard, MsalInterceptor, MsalModule, MsalRedirectComponent } from '@azure/msal-angular';
+import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
+
+const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 
 @NgModule({
   declarations: [
@@ -37,8 +41,36 @@ import { TableModule } from 'primeng/table';
     ImageModule,
     ToolbarModule,
     TableModule,
+    MsalModule.forRoot( new PublicClientApplication({
+      auth: {
+        clientId: '', // Application (client) ID from the app registration
+        authority: '', // The Azure cloud instance and the app's sign-in audience (tenant ID, common, organizations, or consumers)
+        redirectUri: ''// This is your redirect URI
+      },
+      cache: {
+        cacheLocation: 'localStorage',
+        storeAuthStateInCookie: isIE, // Set to true for Internet Explorer 11
+      }
+    }),  {
+      interactionType: InteractionType.Popup, // MSAL Guard Configuration
+      authRequest: {
+        scopes: ['user.read']
+      }
+  }, {
+    interactionType: InteractionType.Popup, // MSAL Interceptor Configuration
+    protectedResourceMap: new Map([ 
+        ['https://graph.microsoft.com/v1.0/me', ['user.read']]
+    ])
+  })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MsalInterceptor,
+      multi: true
+    },
+    MsalGuard  // MsalGuard added as provider here
+  ],
+  bootstrap: [AppComponent, MsalRedirectComponent]
 })
 export class AppModule { }
